@@ -1,0 +1,7 @@
+project_id = "rtnxxjwfffbqyrrulzym"
+
+[functions.submit-partnership-request]
+verify_jwt = false
+
+[functions.calendar-feed]
+verify_jwt = false

@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AUI Official Brand Design System
+Following Al Akhawayn University's Graphic Charter
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+
+    /* AUI Primary Green - Official university green */
+    --primary: 140 64% 24%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 140 64% 30%;
+    --primary-lighter: 140 64% 40%;
+
+    /* AUI Secondary Blue - Academic navy */
+    --secondary: 215 84% 25%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 215 84% 35%;
+
+    /* Program Brand Colors */
+    /* Co-op Program - Professional Blue */
+    --coop: 214 84% 45%;
+    --coop-foreground: 0 0% 100%;
+    --coop-light: 214 84% 55%;
+
+    /* Remote@AUI Program - Tech Teal */
+    --remote: 186 84% 35%;
+    --remote-foreground: 0 0% 100%;
+    --remote-light: 186 84% 45%;
+
+    /* Alternance Program - Professional Purple */
+    --alternance: 271 84% 45%;
+    --alternance-foreground: 0 0% 100%;
+    --alternance-light: 271 84% 55%;
+
+    /* Riipen Brand - AUI Gold accent */
+    --riipen: 48 100% 50%;
+    --riipen-foreground: 0 0% 0%;
+    --riipen-light: 48 100% 60%;
+
+    /* AUI Accent colors */
+    --accent: 210 20% 96%;
+    --accent-foreground: 210 11% 15%;
+
+    /* Supporting colors */
+    --success: 80 58% 51%;
+    --success-foreground: 0 0% 0%;
+
+    /* Neutral grays following AUI palette */
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 11% 46%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 94%;
+    --ring: 140 64% 24%;
+
+    --radius: 0.5rem;
+
+    /* AUI Brand gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(140 64% 24%), hsl(140 64% 30%));
+    --gradient-secondary: linear-gradient(135deg, hsl(215 84% 25%), hsl(215 84% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(140 64% 24%) 0%, hsl(215 84% 25%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    
+    /* Program Brand gradients */
+    --gradient-coop: linear-gradient(135deg, hsl(214 84% 45%), hsl(214 84% 55%));
+    --gradient-remote: linear-gradient(135deg, hsl(186 84% 35%), hsl(186 84% 45%));
+    --gradient-alternance: linear-gradient(135deg, hsl(271 84% 45%), hsl(271 84% 55%));
+
+    /* AUI Brand shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 11% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 11% 15% / 0.1), 0 2px 4px -1px hsl(210 11% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(210 11% 15% / 0.1), 0 4px 6px -2px hsl(210 11% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(210 11% 15% / 0.1), 0 10px 10px -5px hsl(210 11% 15% / 0.04);
+    --shadow-aui: 0 8px 24px hsl(140 64% 24% / 0.12);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Utility classes for scroll container */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
