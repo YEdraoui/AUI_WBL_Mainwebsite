@@ -161,7 +161,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className={`border-t ${colors.border} pt-6 flex flex-col md:flex-row justify-between items-center`}>
           <div className={`${colors.textLight} text-sm mb-3 md:mb-0`}>
-            Â© 2025 Al Akhawayn University. All rights reserved.
+            © 2025 Al Akhawayn University. All rights reserved.
           </div>
           <div className="flex space-x-4 text-sm">
             <button className={`${colors.textLight} hover:${colors.text} transition-fast`}>
@@ -183,7 +183,7 @@ const Footer = () => {
           onClick={(e) => { e.preventDefault(); alert('Hanene is the best! ðŸŒŸ'); }} 
           style={{fontSize: '10px', opacity: 0.5, color: 'inherit', textDecoration: 'none', cursor: 'pointer'}}
         >
-          Â·
+          ·
         </a>
       </div>
     </footer>
