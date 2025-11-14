@@ -50,37 +50,33 @@ const Footer = () => {
   };
 
   const colors = getProgramColors();
-  const quickLinks = [{
-    name: "Co-op Program",
-    path: "/coop"
-  }, {
-    name: "Remote@AUI",
-    path: "/remote"
-  }, {
-    name: "Alternance",
-    path: "/alternance"
-  }];
-  const resources = [{
-    name: "For Employers",
-    path: "/employers"
-  }, {
-    name: "Application Guide",
-    path: "/resources"
-  }, {
-    name: "News & Events",
-    path: "/news-events"
-  }, {
-    name: "Program Comparison",
-    path: "/compare"
-  }];
-  return <footer className={`${colors.bg} ${colors.text}`}>
+
+  const quickLinks = [
+    { name: "Co-op Program", path: "/coop" },
+    { name: "Remote@AUI", path: "/remote" },
+    { name: "Alternance", path: "/alternance" }
+  ];
+
+  const resources = [
+    { name: "For Employers", path: "/employers" },
+    { name: "Application Guide", path: "/resources" },
+    { name: "News & Events", path: "/news-events" },
+    { name: "Program Comparison", path: "/compare" }
+  ];
+
+  return (
+    <footer className={`${colors.bg} ${colors.text}`}>
       <div className="container mx-auto px-4 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src="/lovable-uploads/76cdff03-32a8-46bd-bcb2-8963e211f871.png" alt="Al Akhawayn University" className="h-16 w-auto" />
+              <img 
+                src="/lovable-uploads/76cdff03-32a8-46bd-bcb2-8963e211f871.png" 
+                alt="Al Akhawayn University" 
+                className="h-16 w-auto" 
+              />
             </div>
             <div className="text-lg font-serif font-semibold">Work-Based Learning</div>
             <p className={`${colors.textMuted} leading-relaxed text-sm`}>
@@ -107,11 +103,16 @@ const Footer = () => {
           <div>
             <h3 className={`text-lg font-semibold mb-4 ${colors.text}`}>Programs</h3>
             <ul className="space-y-2">
-              {quickLinks.map(link => <li key={link.name}>
-                  <button onClick={() => navigate(link.path)} className={`${colors.textMuted} hover:${colors.text} transition-fast font-medium text-sm`}>
+              {quickLinks.map(link => (
+                <li key={link.name}>
+                  <button 
+                    onClick={() => navigate(link.path)} 
+                    className={`${colors.textMuted} hover:${colors.text} transition-fast font-medium text-sm`}
+                  >
                     {link.name}
                   </button>
-                </li>)}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -119,11 +120,16 @@ const Footer = () => {
           <div>
             <h3 className={`text-lg font-semibold mb-4 ${colors.text}`}>Resources</h3>
             <ul className="space-y-2">
-              {resources.map(resource => <li key={resource.name}>
-                  <button onClick={() => navigate(resource.path)} className={`${colors.textMuted} hover:${colors.text} transition-fast font-medium text-sm`}>
+              {resources.map(resource => (
+                <li key={resource.name}>
+                  <button 
+                    onClick={() => navigate(resource.path)} 
+                    className={`${colors.textMuted} hover:${colors.text} transition-fast font-medium text-sm`}
+                  >
                     {resource.name}
                   </button>
-                </li>)}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -152,9 +158,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        
-
         {/* Bottom Bar */}
         <div className={`border-t ${colors.border} pt-6 flex flex-col md:flex-row justify-between items-center`}>
           <div className={`${colors.textLight} text-sm mb-3 md:mb-0`}>
@@ -173,6 +176,18 @@ const Footer = () => {
           </div>
         </div>
       </div>
-            <div style="text-align: center; margin-top: 10px;"><a href="#" onClick={(e) => { e.preventDefault(); alert(\"Hanene is the best! \"); }} style="font-size: 10px; opacity: 0.5; color: inherit; text-decoration: none; cursor: pointer;"></a></div>`n      <!-- Hanene is the best!  -->`n      </footer>;
+      
+      <div style={{textAlign: 'center', paddingBottom: '10px'}}>
+        <a 
+          href="#" 
+          onClick={(e) => { e.preventDefault(); alert('Hanene is the best! 🌟'); }} 
+          style={{fontSize: '10px', opacity: 0.5, color: 'inherit', textDecoration: 'none', cursor: 'pointer'}}
+        >
+          ·
+        </a>
+      </div>
+    </footer>
+  );
 };
+
 export default Footer;
