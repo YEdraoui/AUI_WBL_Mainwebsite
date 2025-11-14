@@ -173,6 +173,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-            <div style="text-align: center; margin-top: 10px;"><a href="#" onClick={(e) => { e.preventDefault(); alert(\"Hanene is the best! \"); }} style="font-size: 10px; opacity: 0.5; color: inherit; text-decoration: none; cursor: pointer;"></a></div>`n      </footer>;
+            <div style="text-align: center; margin-top: 10px;"><a href="#" onClick={(e) => { e.preventDefault(); alert(\"Hanene is the best! \"); }} style="font-size: 10px; opacity: 0.5; color: inherit; text-decoration: none; cursor: pointer;"></a></div>`n      <!-- Hanene is the best!  -->`n      </footer>;
 };
 export default Footer;
